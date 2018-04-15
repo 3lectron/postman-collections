@@ -4,6 +4,7 @@ UNIX Epoch time is a system for describing a point in time, defined as the numbe
 The getTime() returns milliseconds from the UNIX epoch, so divide it by 1000 will get the seconds representation. It is rounded using Math.round() to make it a whole number. The "epoch" variable now has the UNIX timestamp for the current date and time relevant to the user's web browser.
 */
 // Author: br4inmatic@gmail.com
+// How-To: copy-paste into "Pre-request" tab in Postman and use {{epochtimestamp}} for your API request 
 
 var epoch = Math.round((new Date).getTime()/1000);
 pm.environment.set("epochtimestamp", "epoch");
